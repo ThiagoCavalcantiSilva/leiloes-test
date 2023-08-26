@@ -6,6 +6,7 @@ import org.junit.jupiter.api.*;
 
 import java.math.BigDecimal;
 
+import static java.math.BigDecimal.TEN;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -28,6 +29,7 @@ public class LancesTest {
 	}
 
 	@Test
+	@Order(1)
 	public void naoDeveriaDarLanceMenorQue10Centavos() {
 		paginaDeLances.preencherValor("0");
 		paginaDeLances.submeterLance();
@@ -37,6 +39,7 @@ public class LancesTest {
 	}
 
 	@Test
+	@Order(2) // Adicionei a ordem, pois o JUnit executava esse por último, logo, dava lance inválido pois era consecutivo (visto que o 3 insere lances)
 	public void naoDeveriaDarLanceMenorQueOValorMinimo() {
 		BigDecimal lanceMenos5Centavos = paginaDeLances.obterValorInicial().subtract(new BigDecimal("0.05"));
 
@@ -52,5 +55,20 @@ public class LancesTest {
 	Entretanto, como o usuário não pode dar dois lances repetidos, dificulta o teste pois tem que limpar a base,
 	logar com outro usuário ou mockar o banco (separar as sessões).
 	*/
+
+	@Test
+	@Order(3)
+	public void naoDeveriaDarLancesConsecutivosNoMesmoLeilao() {
+		BigDecimal valorInicial = paginaDeLances.obterValorInicial();
+
+		paginaDeLances.preencherValor(valorInicial.toString());
+		paginaDeLances.submeterLance();
+
+		paginaDeLances.preencherValor(valorInicial.add(TEN).toString());
+		paginaDeLances.submeterLance();
+
+		assertTrue(paginaDeLances.isLanceInvalido());
+		assertTrue(paginaDeLances.isPaginaAtual());
+	}
 
 }
