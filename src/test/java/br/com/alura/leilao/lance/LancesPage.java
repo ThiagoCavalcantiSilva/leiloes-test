@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LancesPage {
 
-	private static final String URL_LANCES = "http://localhost:8080/leilao/2";
+	private static final String URL_LANCES = "http://localhost:8080/leiloes/2";
 
 	private WebDriver browser;
 
@@ -13,6 +13,10 @@ public class LancesPage {
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 		this.browser = new ChromeDriver();
 		this.browser.navigate().to(URL_LANCES);
+	}
+
+	public LancesPage(WebDriver browser) {
+		this.browser = browser;
 	}
 
 	public boolean isPaginaAtual() {

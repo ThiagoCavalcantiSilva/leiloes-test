@@ -1,5 +1,6 @@
 package br.com.alura.leilao.leiloes;
 
+import br.com.alura.leilao.lance.LancesPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -31,6 +32,15 @@ public class LeiloesPage extends PageObject {
 
 	public boolean isPaginaAtual() {
 		return this.browser.getCurrentUrl().equals(URL_LIST);
+	}
+
+	public LancesPage darLance(){
+		// Constrói o seletor para o botão "dar lance" com base no ID do leilão 2
+		String botaoDarLanceSelector = String.format("a[href*='/leiloes/%s']", 2);
+
+		// Clica no botão, redirecionando para a página de dar lances no leilão
+		browser.findElement(By.cssSelector(botaoDarLanceSelector)).click();
+		return new LancesPage(browser);
 	}
 
 }
