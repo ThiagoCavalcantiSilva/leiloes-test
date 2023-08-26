@@ -1,5 +1,6 @@
 package br.com.alura.leilao.lance;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -29,6 +30,19 @@ public class LancesPage {
 
 	public void fechar() {
 		this.browser.quit();
+	}
+
+	public void preencherValor(String valor){
+		this.browser.findElement(By.id("valor")).sendKeys(valor);
+	}
+
+	public void submeterLance(){
+		this.browser.findElement(By.id("btnDarLance")).click();
+	}
+
+	public boolean isErroLanceMenorQue10Centavos() {
+		String pageSource = this.browser.getPageSource();
+		return pageSource.contains("deve ser maior que ou igual a 0.1");
 	}
 
 }
