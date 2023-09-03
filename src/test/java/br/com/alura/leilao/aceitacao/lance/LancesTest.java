@@ -1,7 +1,7 @@
-package br.com.alura.leilao.lance;
+package br.com.alura.leilao.aceitacao.lance;
 
-import br.com.alura.leilao.leiloes.LeiloesPage;
-import br.com.alura.leilao.login.LoginPage;
+import br.com.alura.leilao.aceitacao.leiloes.LeiloesPage;
+import br.com.alura.leilao.aceitacao.login.LoginPage;
 import org.junit.jupiter.api.*;
 
 import java.math.BigDecimal;

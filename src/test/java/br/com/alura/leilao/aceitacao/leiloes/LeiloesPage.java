@@ -1,11 +1,11 @@
-package br.com.alura.leilao.leiloes;
+package br.com.alura.leilao.aceitacao.leiloes;
 
-import br.com.alura.leilao.lance.LancesPage;
+import br.com.alura.leilao.aceitacao.lance.LancesPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import br.com.alura.leilao.PageObject;
+import br.com.alura.leilao.aceitacao.PageObject;
 
 public class LeiloesPage extends PageObject {
 

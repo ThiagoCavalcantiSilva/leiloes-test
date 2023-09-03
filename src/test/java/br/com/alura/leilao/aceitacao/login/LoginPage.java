@@ -1,10 +1,10 @@
-package br.com.alura.leilao.login;
+package br.com.alura.leilao.aceitacao.login;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 
-import br.com.alura.leilao.PageObject;
-import br.com.alura.leilao.leiloes.LeiloesPage;
+import br.com.alura.leilao.aceitacao.PageObject;
+import br.com.alura.leilao.aceitacao.leiloes.LeiloesPage;
 
 public class LoginPage extends PageObject {
 

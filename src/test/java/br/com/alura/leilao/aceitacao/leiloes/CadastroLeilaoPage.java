@@ -1,9 +1,9 @@
-package br.com.alura.leilao.leiloes;
+package br.com.alura.leilao.aceitacao.leiloes;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import br.com.alura.leilao.PageObject;
+import br.com.alura.leilao.aceitacao.PageObject;
 
 public class CadastroLeilaoPage extends PageObject {
 

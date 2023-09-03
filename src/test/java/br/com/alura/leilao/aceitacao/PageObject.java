@@ -1,4 +1,4 @@
-package br.com.alura.leilao;
+package br.com.alura.leilao.aceitacao;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

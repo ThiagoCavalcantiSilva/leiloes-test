@@ -1,4 +1,4 @@
-package br.com.alura.leilao.lance;
+package br.com.alura.leilao.aceitacao.lance;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
