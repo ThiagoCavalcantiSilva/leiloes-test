@@ -15,3 +15,4 @@
 + Basta importar o projeto, baixar as dependências do maven e inicializar o LeilaoApplication (Main)
     - O servidor estará ativo em localhost:8080
     - Para acessar, basta fazer login com o usuário "fulano" e senha "pass"
++ Para verificar os testes, rodar um "mvn test" ou executar pela IDE
