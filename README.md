@@ -1,4 +1,4 @@
-## Teste de uma sistema de leilões
+## Testes de um sistema de leilões
 + O projeto escolhido foi uma aplicação de leilões, com autenticação. Onde os usuários podem cadastrar itens e dar lances.
     - Motivo da escolha:
       - Projeto utiliza banco de dados H2, que é em memória, logo, não é necessário instalar ferramentas externas.
